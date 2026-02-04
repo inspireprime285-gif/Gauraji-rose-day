@@ -1,0 +1,74 @@
+index.html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gauraji — Rose Day 🌷</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="page" class="min-h-screen text-gray-800">
+  <header class="py-8 text-center relative overflow-hidden">
+    <div id="bg-decor" class="absolute inset-0 opacity-30 pointer-events-none bg-cover bg-center"></div>
+    <h1 class="text-4xl font-extrabold text-pink-500">For You — Rose Day 🌷</h1>
+    <p class="mt-2 text-pink-400">A little surprise for my love</p>
+  </header>
+    <main class="max-w-4xl mx-auto px-6 pb-12">
+    <section class="bg-white/90 backdrop-blur rounded-2xl shadow-lg p-6 mb-8">
+      <div class="flex flex-col md:flex-row items-center gap-6">
+        <img id="rose-main" src="assets/photos/rose.jpg" alt="Rose" class="w-56 h-40 rounded-xl object-cover shadow-sm">
+        <div>
+          <h2 class="text-2xl font-semibold text-pink-600">Happy Rose Day</h2>
+          <p id="rose-msg" class="mt-3 text-gray-700">"Pyari Gaura Ji, mere bikhre hue jeevan ko sambhalne aur mujhe pyar ka sahi matlab sikhane ke liye shukriya. Aap sirf meri patni nahi, meri saansein, meri atma aur meri puri duniya ho. Jaise ek gulab apni khushbu se sab mehka deta hai, waise hi aapne meri zindagi mehka di hai. Main hamesha aapke saath ek nanhe bacche ki tarah chipka rahunga aur kabhi door nahi jane doonga.
+Happy Rose Day meri Momma, meri Baccha! I love you forever and ever! 🌹💞"</p>
+          <button id="open-gallery" class="mt-4 inline-flex items-center gap-2 bg-pink-500 text-white px-4 py-2 rounded-lg hover:bg-pink-600">View Gallery</button>
+        </div>
+      </div>
+    </section>
+    <section class="mb-8">
+  <h3 class="text-xl font-semibold mb-4">Photo Gallery</h3>
+  <div id="gallery" class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+    <img class="gallery-thumb rounded-lg object-cover w-full h-36 cursor-pointer" src="assets/photos/photo1.jpg" alt="photo1" data-caption="memory 1">
+    <img class="gallery-thumb rounded-lg object-cover w-full h-36 cursor-pointer" src="assets/photos/photo2.jpg" alt="photo2" data-caption="memory 2">
+    <img class="gallery-thumb rounded-lg object-cover w-full h-36 cursor-pointer" src="assets/photos/photo3.jpg" alt="photo3" data-caption="memory 3">
+    <img class="gallery-thumb rounded-lg object-cover w-full h-36 cursor-pointer" src="assets/photos/photo4.jpg" alt="photo4" data-caption="memory 4">
+    <img class="gallery-thumb rounded-lg object-cover w-full h-36 cursor-pointer" src="assets/photos/photo5.jpg" alt="photo5" data-caption="memory 5">
+    <img class="gallery-thumb rounded-lg object-cover w-full h-36 cursor-pointer" src="assets/photos/photo6.jpg" alt="photo6" data-caption="memory 6">
+  </div>
+</section>
+
+<section class="bg-white/90 backdrop-blur rounded-2xl shadow-lg p-6">
+  <h3 class="text-xl font-semibold mb-4">Playlist</h3>
+  <div class="flex items-center gap-4">
+    <div>
+      <button id="prev" class="px-3 py-2 bg-pink-100 rounded">Prev</button>
+      <button id="play" class="px-3 py-2 bg-pink-500 text-white rounded mx-2">Play</button>
+      <button id="next" class="px-3 py-2 bg-pink-100 rounded">Next</button>
+    </div>
+    <div class="flex-1">
+      <div id="track-title" class="font-medium">No track</div>
+      <input id="seek" type="range" min="0" max="100" value="0" class="w-full mt-2">
+    </div>
+  </div>
+  <audio id="audio" preload="metadata"></audio>
+
+  <ul id="playlist" class="mt-4 space-y-2 text-sm text-gray-700">
+    <li data-src="assets/music/song1.mp3">Song 1 — Your Song Title</li>
+    <li data-src="assets/music/song2.mp3">Song 2 — Another Track</li>
+  </ul>
+</section>
+    </main>
+      <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center p-6 z-50">
+    <div class="max-w-3xl w-full">
+      <button id="close-lightbox" class="mb-4 text-white text-xl">✕</button>
+      <img id="lightbox-img" src="" alt="Large" class="w-full rounded-lg object-contain">
+      <p id="lightbox-cap" class="mt-3 text-white"></p>
+    </div>
+      </div>
+        <script src="script.js"></script>
+        <script>
+          document.getElementById('bg-decor').style.backgroundImage = "url('assets/background/tulip.jpg')";
+  </script>
+</body>
+</html>
